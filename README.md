@@ -1,28 +1,21 @@
 # EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS
 ## FIRST COME FIRST SERVE
-
-### AIM:
+## AIM:
 To write a program for the first come first serve method of disc scheduling.
 
-### DESCRIPTION:
+## DESCRIPTION:
 Disk scheduling is schedule I/O requests arriving for the disk.
 
 It is important because: -
 
-Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time
-by the disk controller. Thus other I/O requests need to wait in the waiting queue and need to be
-scheduled.
+Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller. Thus other I/O requests need to wait in the waiting queue and need to be scheduled.
 
-Two or more request may be far from each other so can result in greater disk head movement.
-Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an
-efficient manner
+Two or more request may be far from each other so can result in greater disk head movement. Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner
 
-FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the
-order they arrive in the disk queue.
+FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the order they arrive in the disk queue.
 
-### PROGRAM:
+## PROGRAM:
 ```
-
 #include <stdio.h>
 #include <stdlib.h>
 int main()
@@ -44,29 +37,23 @@ printf("Total head moment is %d",TotalHeadMoment);
 return 0;
 }
 ```
-
-### OUTPUT:
-  
-![Screenshot 2023-10-08 204204](https://github.com/Aishwarya-TM/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/127846109/a18fe07e-2e54-4400-9d7d-78e10d234555)
-
-### RESULT:
-Thus the implementation of the program for first come first serve disc scheduling has been
-successfully executed.
+## OUTPUT:
+![image](https://github.com/Niroshassithanathan/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/121418437/e1a709e9-d9a0-42ef-9523-63f87e3f811b)
 
 
-## SHORTEST SEEK TIME FIRST
+## RESULT:
+Thus the implementation of the program for first come first serve disc scheduling has been successfully executed.
 
-### AIM:
+# SHORTEST SEEK TIME FIRST
+## AIM:
 To write a program for the first come first serve method of disc scheduling.
 
-### DESCRIPTION:
+## DESCRIPTION:
 Shortest seek time first (SSTF) algorithm
 
-Shortest seek time first (SSTF) algorithm selects the disk I/O request which requires the least disk arm
-movement from its current position regardless of the direction. It reduces the total seek time as compared
-to FCFS.
+Shortest seek time first (SSTF) algorithm selects the disk I/O request which requires the least disk arm movement from its current position regardless of the direction. It reduces the total seek time as compared to FCFS.
 
-### PROGRAM:
+## PROGRAM:
 ```
 #include<stdio.h>
 #include<stdlib.h>
@@ -100,34 +87,26 @@ count++;
 printf("Total head movement is %d",TotalHeadMoment);
 return 0;
 }
-
 ```
-
-### OUTPUT:
-
-![Screenshot 2023-10-08 204225](https://github.com/Aishwarya-TM/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/127846109/52055641-f28c-4d32-ab7b-f50d08a6428a)
+## OUTPUT:
+![image](https://github.com/Niroshassithanathan/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/121418437/21a76d32-9960-4d57-b134-c23f83fccd5f)
 
 
-### RESULT:
-Thus the implementation of the program for shortest seek time first disc scheduling has been
-successfully executed.
+## RESULT:
+Thus the implementation of the program for shortest seek time first disc scheduling has been successfully executed.
 
-## SCAN
-
-### AIM:
+# SCAN
+## AIM:
 To write a program for the first come first serve method of disc scheduling.
 
-### DESCRIPTION:
+## DESCRIPTION:
 SCAN
 
-It is also called as Elevator Algorithm. In this algorithm, the disk arm moves into a particular direction
-till the end, satisfying all the requests coming in its path, and then it turns backend moves in the reverse
-direction satisfying requests coming in its path.
+It is also called as Elevator Algorithm. In this algorithm, the disk arm moves into a particular direction till the end, satisfying all the requests coming in its path, and then it turns backend moves in the reverse direction satisfying requests coming in its path.
 
-It works in the way an elevator works, elevator moves in a direction completely till the last floor of that
-direction and then turns back.
+It works in the way an elevator works, elevator moves in a direction completely till the last floor of that direction and then turns back.
 
-### PROGRAM:
+## PROGRAM:
 ```
 #include<stdio.h>
 #include<stdlib.h>
@@ -201,27 +180,23 @@ initial=RQ[i];
 printf("Total head movement is %d",TotalHeadMoment);
 return 0;
 }
-
 ```
-### OUTPUT:
+## OUTPUT:
+![image](https://github.com/Niroshassithanathan/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/121418437/f83a3584-44bb-46c3-95ae-e5e146f71e2c)
 
-![Screenshot 2023-10-08 204237](https://github.com/Aishwarya-TM/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/127846109/722601de-9db8-4732-8e97-1ddc820d8392)
-
-### RESULT:
+## RESULT:
 Thus the implementation of the program for SCAN disc scheduling has been successfully executed.
-## LOOK
-### AIM:
+
+# LOOK
+## AIM:
 To write a program for the first come first serve method of disc scheduling.
 
-### DESCRIPTION:
+## DESCRIPTION:
 Look
 
-It is similar to the SCAN disk scheduling algorithm except for the difference that the disk arm in spite of
-going to the end of the disk goes only to the last request to be serviced in front of the head and then
-reverses its direction from there only. Thus, it prevents the extra delay which occurred due to unnecessary
-traversal to the end of the disk.
+It is similar to the SCAN disk scheduling algorithm except for the difference that the disk arm in spite of going to the end of the disk goes only to the last request to be serviced in front of the head and then reverses its direction from there only. Thus, it prevents the extra delay which occurred due to unnecessary traversal to the end of the disk.
 
-### PROGRAM:
+## PROGRAM:
 ```
 #include<stdio.h>
 #include<stdlib.h>
@@ -291,9 +266,8 @@ printf("Total head movement is %d",TotalHeadMoment);
 return 0;
 }
 ```
-### OUTPUT:
+## OUTPUT:
+![image](https://github.com/Niroshassithanathan/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/121418437/7902b33a-e397-418d-88be-f33e88d38ec5)
 
-![Screenshot 2023-10-08 204253](https://github.com/Aishwarya-TM/OS-EX.11-IMPLEMENTATION-OF-DISK-SCHEDULING-ALGORITHMS/assets/127846109/5657aa8c-0ed7-4eaa-b207-4710836bbbb4)
-
-### RESULT:
+## RESULT:
 Thus the implementation of the program for LOOK disc scheduling has been successfully executed.
